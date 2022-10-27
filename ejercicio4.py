@@ -5,7 +5,8 @@ class Alumno:
         print("Alumno se ha creado con éxito")
 
     def __str__(self):
-        formato = "Nombre: {}, Nota: {}".format(self.nombre,self.nota)
+        formato = "Nombre: {}, Nota: {}".format(self.nombre,str(self.nota))
+        return formato
 
     def calificacion(self):
         respuesta=None
@@ -16,6 +17,9 @@ class Alumno:
         return respuesta
 alumno1 = Alumno("Marta",3)
 alumno2 = Alumno("Juan",6)
+alumno3 = Alumno("Alfredo",10)
 
 print(alumno1.calificacion())
 print(alumno2.calificacion())
+
+print(alumno1)
