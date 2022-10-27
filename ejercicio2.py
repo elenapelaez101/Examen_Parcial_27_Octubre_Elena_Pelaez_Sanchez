@@ -13,11 +13,15 @@ Dada la lista anterior y un valor 145 devolver el índice de 145 en la lista si 
 lista= [18,50,210,80,145,333,70,30]
 
 
-for i in l:
-    if l> 30:
+for i in lista:
+    if i> 30:
         break
-    elif l%10 ==0 and l< 200
-    print(l)
+    elif i%10 ==0 and i< 200:
+        print(i)
+
+lista.sort()
+
+
 
 
 
