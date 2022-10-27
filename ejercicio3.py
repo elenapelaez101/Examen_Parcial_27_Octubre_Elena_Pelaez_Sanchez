@@ -23,3 +23,5 @@ class Alumno:
             print("El alumno ha aprobado")
         else:
             print("El alumno ha suspendido")
+alumno1 = Alumno("Marta",3)
+alumno2 = Alumno("Juan",6)
