@@ -18,10 +18,12 @@ class Alumno:
     def __str__(self):
         return "Nombre {}, nota{}".format(self.nombre, self.nota)
 
-    def clasificacion(self):
+    def calificacion(self):
         if self.nota > 5:
             print("El alumno ha aprobado")
         else:
             print("El alumno ha suspendido")
 alumno1 = Alumno("Marta",3)
 alumno2 = Alumno("Juan",6)
+
+alumno1.calificacion
