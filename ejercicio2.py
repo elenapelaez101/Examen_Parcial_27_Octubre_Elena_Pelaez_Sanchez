@@ -21,7 +21,12 @@ for i in lista:
 
 lista.sort()
 
+valor =145
+if valor in lista:
 
+    print(lista)
+else:
+    print("-1")
 
 
 
