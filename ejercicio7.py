@@ -17,4 +17,13 @@ class Polinommio(object):
 
 
     def agregar_termino(polinomio, termino,valor):
-        
+        aux = Nodo()
+        dato = datoPolinomio(valor, termino)
+        aux.info = dato
+
+        if(termino > polinomio.grado):
+            aux.sig= polinomio.termino_mayor
+            polinomio.termino_mayor = aux
+            polinomio.grado = termino
+        else:
+            actual = polinomio.termino_mayor
