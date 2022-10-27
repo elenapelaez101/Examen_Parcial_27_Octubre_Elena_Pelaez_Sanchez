@@ -20,7 +20,7 @@ class Alumno:
         if self.nota > 5:
             respuesta= "El alumno {} ha aprobado".format(self.nombre)
         else:
-            respuesta= "El alumno ha suspendido"
+            respuesta= "El alumno {} ha suspendido".format(self.nombre)
         return respuesta
 alumno1 = Alumno("Marta",3)
 alumno2 = Alumno("Juan",6)
