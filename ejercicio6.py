@@ -26,7 +26,13 @@ def determinante(fil1,fil2,fil3):
     det = multiplicacion(matriz)-multiplicacion(matinvertida)
     return det
 
-    
+fila1 = [2,1,0]
+fila2 = [3,1,-1]
+fila3= [2,0,4]
+
+print(determinante(fila1,fila2,fila3))
+
+
 
 
 
