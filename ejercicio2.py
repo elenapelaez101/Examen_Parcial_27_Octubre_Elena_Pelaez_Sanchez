@@ -19,38 +19,55 @@ for i in lista:
     elif i%10 ==0 and i< 200:
         print(i)
 
-def mergesort(listad):
-    if len(lis)<=1:
-        return listad
+def mergesort(lista):
+    tam =len(lista)
+    if tam<=1:
+        return lista
     else:
-        med =len(listad)//2
-        izq= []
-        for i in range(0,med):
-            izq.append(listad[i])
-        der = []
-        for i in range(med,len(listad)):
-            der.append(lis[i])
-        izq = mergesort(izq)
-        der = mergesort(der)
-        if(izq[med-1]<=der[0]):
-            izq +=der
-            return izq
-        resultado = merge(izq,der)
-        return resultado
+        med =tam//2
+        izq = lista[:med]
+        der = lista[med:]
 
-def devolver_indice(indice):
-    for i in resultado:
-        if i == indice:
-            return indice
-        else:return -1
+        mergesort(izq)
+        mergesort(der)
 
-valor =145
+        p=0
+        q=0
+        r=0
 
-if valor in lista:
+        izqtam = len(izq)
+        dertam= len(der)
 
-    print(lista)
-else:
-    print("-1")
+        while p< dertam and q<dertam:
+            if der[p] < izq[q]:
+                lista[r]=izq[p]
+                p+=1
+
+            else:
+                lista[r]=der[q]
+                q+=1
+            r +=1
+
+        while p< izqtam:
+            lista[r]= izq[p]
+            p+=1
+            r+=1
+
+        while q< dertam:
+            lista[r]= der[q]
+            q+=1
+            r+=1
 
 
 
+def tuvalor(lista, valor):
+
+    if valor in lista:
+
+        print("Si que está")
+    else:
+        print("-1")
+
+
+print(mergesort(lista))
+print(tuvalor(lista,145))
