@@ -15,15 +15,15 @@ class Alumno:
         self.nota = nota
         print("Alumno se ha creado con éxito")
 
-    def __str__(self):
-        return ({}, {}).format(self.nombre, self.nota)
-
     def calificacion(self):
+        respuesta=None
         if self.nota > 5:
-            return "El alumno ha aprobado"
+            respuesta= "El alumno {} ha aprobado".format(self.nombre)
         else:
-            return "El alumno ha suspendido"
+            respuesta= "El alumno ha suspendido"
+        return respuesta
 alumno1 = Alumno("Marta",3)
 alumno2 = Alumno("Juan",6)
 
-print(alumno1.calificacion)
+print(alumno1.calificacion())
+print(alumno2.calificacion())
